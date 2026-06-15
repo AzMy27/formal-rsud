@@ -66,68 +66,105 @@
     .nav-cta::after { display: none !important; }
     .nav-cta:hover { background: #e8b94e !important; transform: translateY(-1px); }
  
-    /* ── SLIDER ──────────────────────────────────── */
-    #slider { position: relative; min-height: 600px; overflow: hidden; }
-    .slide {
-      position: absolute; inset: 0;
-      opacity: 0; transition: opacity 1.2s ease;
-      background-size: cover; background-position: center;
+    /* ── HERO SLIDER ───────────────────────── */
+
+    #slider{
+      position:relative;
+      width:100%;
+      height:100vh;
+      min-height:650px;
+      max-height:900px;
+      overflow:hidden;
     }
-    .slide.active { opacity: 1; }
-    .slide-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(120deg, rgba(11,61,110,.82) 0%, rgba(11,61,110,.35) 60%, transparent 100%);
+
+    .slider-wrapper{
+      position:relative;
+      width:100%;
+      height:100%;
     }
-    .slide-content {
-      position: absolute; bottom: 18%; left: 8%;
-      color: var(--white); max-width: 560px;
+
+    .slider-item{
+      position:absolute;
+      inset:0;
+
+      opacity:0;
+      visibility:hidden;
+
+      transition:all .8s ease;
     }
-    .slide-tag { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 12px; }
-    .slide-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.18; margin-bottom: 16px; }
-    .slide-sub { font-size: 1rem; color: rgba(255,255,255,.8); line-height: 1.7; margin-bottom: 28px; max-width: 440px; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--blue); color: var(--white);
-      padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: .9rem;
-      text-decoration: none; transition: background .2s, transform .2s;
+
+    .slider-item.active{
+      opacity:1;
+      visibility:visible;
+      z-index:2;
     }
-    .btn-primary:hover { background: #1b8fc9; transform: translateY(-2px); }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 8px;
-      border: 2px solid var(--white); color: var(--white);
-      padding: 11px 26px; border-radius: 50px; font-weight: 500; font-size: .9rem;
-      text-decoration: none; margin-left: 12px; transition: background .2s;
+
+    .slider-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+
+      transform:scale(1.05);
+      transition:transform 8s linear;
     }
-    .btn-outline:hover { background: rgba(255,255,255,.15); }
-    .slider-dots {
-      position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-      display: flex; gap: 10px;
+
+    .slider-item.active img{
+      transform:scale(1);
     }
-    .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: rgba(255,255,255,.4); cursor: pointer; transition: all .3s;
+
+    .slider-overlay{
+      position:absolute;
+      inset:0;
+
+      background:
+      linear-gradient(
+          90deg,
+          rgba(11,61,110,.75) 0%,
+          rgba(11,61,110,.35) 45%,
+          rgba(11,61,110,.15) 100%
+      );
     }
-    .dot.active { background: var(--gold); width: 28px; border-radius: 4px; }
-    .slider-arrows { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 24px; pointer-events: none; }
-    .arrow {
-      pointer-events: all; cursor: pointer;
-      width: 46px; height: 46px; border-radius: 50%;
-      background: rgba(255,255,255,.15); border: 2px solid rgba(255,255,255,.4);
-      display: flex; align-items: center; justify-content: center;
-      color: white; font-size: 1.2rem; transition: background .2s;
-      backdrop-filter: blur(4px);
+
+    .slider-caption{
+      position:absolute;
+      left:8%;
+      bottom:20%;
+      z-index:5;
+
+      max-width:700px;
+      color:#fff;
     }
-    .arrow:hover { background: rgba(255,255,255,.3); }
-    /* slide backgrounds using CSS gradients as placeholders */
-    .slide-1 { background: linear-gradient(135deg, #0B3D6E 0%, #2B9FD9 50%, #0B3D6E 100%); }
-    .slide-2 { background: linear-gradient(135deg, #1a5276 0%, #2980b9 60%, #1a5276 100%); }
-    .slide-3 { background: linear-gradient(135deg, #0d4f8a 0%, #3498db 60%, #0d4f8a 100%); }
-    /* medical cross decorative pattern */
-    .slide-deco {
-      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
-      opacity: .07;
+
+    .slider-caption span{
+      display:inline-block;
+
+      background:rgba(255,255,255,.15);
+
+      backdrop-filter:blur(10px);
+
+      padding:8px 18px;
+
+      border-radius:50px;
+
+      font-size:.8rem;
+      letter-spacing:.15em;
+
+      margin-bottom:20px;
     }
- 
+
+    .slider-caption h1{
+      font-family:'Playfair Display',serif;
+
+      font-size:clamp(2.5rem,5vw,4.5rem);
+
+      line-height:1.15;
+
+      margin:0;
+
+      text-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    
     /* ── SAMBUTAN DIREKTUR ───────────────────────── */
     #sambutan {
       display: grid;
@@ -423,6 +460,7 @@
 
     /* ── PROFIL ───────────────────────────── */
     #profil{ padding:100px 8%; background:#fff; }
+    /* Header */
     .profil-grid{
       display:grid;
       grid-template-columns:1.2fr 1fr;
@@ -437,28 +475,107 @@
       margin-bottom:18px;
       text-align:justify;
     }
-    .profil-image img{ width:100%; border-radius:20px; display:block; box-shadow:0 20px 50px rgba(0,0,0,.08); }
-    .profil-stats{ display:grid; gap:15px; margin-top:30px;
-      grid-template-columns:repeat(3,1fr);
+    .profil-image img{
+      width:100%;
+      border-radius:20px;
+      display:block;
+      box-shadow:0 20px 50px rgba(0,0,0,.08);
     }
-    .stat-box{ background:#f8fafc; padding:20px; border-radius:14px; text-align:center; }
+    /* Statistik */
+    .profil-stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:30px;
+    }
+    .stat-box{
+      background:#f8fafc;
+      padding:20px;
+      border-radius:14px;
+      text-align:center;
+      border:1px solid #e5edf5;
+    }
     .stat-box h4{ color:var(--blue); font-size:1.4rem; margin-bottom:5px; }
     .stat-box span{ color:var(--muted); font-size:.85rem; }
-    .visi-misi-grid{ display:grid; gap:30px; margin-top:70px;
-      grid-template-columns:1fr 1fr;
+    /* Section Title */
+    .section-header-small{ text-align:center; margin:80px 0 40px; }
+    .section-header-small h3{ color:var(--navy); font-size:2rem; margin-bottom:10px; }
+    .section-header-small p{ color:var(--muted); }
+    /* VISI */
+    .visi-section{ margin-top:80px; }
+    .visi-card{
+      background:linear-gradient(135deg,var(--navy),var(--blue));
+      color:#fff;
+      padding:50px;
+      border-radius:24px;
+      text-align:center;
     }
-    .visi-card,
-    .misi-card{
-    background:#f8fafc;
-    padding:35px;
-    border-radius:20px;
-    border:1px solid #e5edf5;
+    .visi-card h3{ margin-bottom:20px; font-size:2rem; }
+    .visi-card blockquote{
+      margin:0;
+      font-size:1.2rem;
+      line-height:1.9;
+      font-style:italic;
     }
-    .visi-card h3,
-    .misi-card h3{ color:var(--navy); margin-bottom:18px; }
-    .visi-card p{ line-height:1.8; color:var(--muted); }
-    .misi-card ul{ padding-left:20px; }
-    .misi-card li{ margin-bottom:12px; color:var(--muted); line-height:1.7; }
+    /* MISI */
+    .misi-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
+    .misi-item{
+        background:#fff;
+        border:1px solid #e5edf5;
+        border-radius:16px;
+        padding:20px;
+        display:flex;
+        gap:15px;
+        align-items:flex-start;
+        transition:.3s;
+    }
+    .misi-item:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,.06);}
+    .misi-item i{ color:#22c55e; font-size:1.1rem; margin-top:3px; }
+    .misi-item span{ line-height:1.8; color:var(--muted); }
+    /* MOTTO */
+    .motto-section{ margin-top:80px; }
+    .motto-card{
+        background:#f8fafc;
+        border:1px solid #e5edf5;
+        border-radius:24px;
+        padding:50px;
+        text-align:center;
+    }
+    .motto-card h3{ color:var(--navy); margin-bottom:20px; }
+    .motto-card p{
+      font-family:'Playfair Display', serif;
+      color:var(--blue);
+      font-size:2rem;
+      font-weight:700;
+      margin:0;
+    }
+    /* BUDAYA KERJA */
+    .budaya-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+    .budaya-card{
+      background:#fff;
+      border:1px solid #e5edf5;
+      border-radius:16px;
+      padding:25px;
+      text-align:center;
+      transition:.3s;
+    }
+    .budaya-card:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,.06); }
+    .budaya-card h4{ color:var(--blue); margin-bottom:10px; }
+    .budaya-card p{ color:var(--muted); line-height:1.7; font-size:.9rem; }
+    /* NILAI PELAYANAN */
+    .nilai-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+    .nilai-card{
+        background:#fff;
+        border:1px solid #e5edf5;
+        border-radius:16px;
+        padding:25px;
+        text-align:center;
+        transition:.3s;
+    }
+    .nilai-card:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,.06); }
+    .nilai-card i{ font-size:2rem; color:var(--blue); margin-bottom:15px; }
+    .nilai-card h4{ color:var(--navy); margin-bottom:10px; }
+    .nilai-card p{ color:var(--muted); font-size:.9rem; line-height:1.7; }
 
     /* ── LAYANAN ───────────────────────── */
     #layanan{ padding:100px 8%; background:#fff; }
@@ -533,6 +650,21 @@
       nav ul { display: none; }
       .footer-main { grid-template-columns: 1fr; gap: 32px; padding: 48px 6% 40px; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media(max-width:576px){
+      .budaya-grid,
+      .nilai-grid{ grid-template-columns:1fr; }
+      .visi-card{ padding:30px; }
+      .motto-card{ padding:30px; }
+      .visi-card blockquote{ font-size:1rem; }
+    }
+    @media(max-width:992px){
+      .profil-grid{ grid-template-columns:1fr; }
+      .profil-stats{ columns:1fr;}
+      .misi-grid{ grid-template-columns:1fr; }
+      .budaya-grid{ grid-template-columns:repeat(2,1fr); }
+      .nilai-grid{ grid-template-columns:repeat(2,1fr); }
+      .motto-card p{ font-size:1.5rem; }
     }
   </style>
 </head>
