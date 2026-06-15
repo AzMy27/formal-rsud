@@ -1,5 +1,5 @@
 <header id="navbar">
-  <a href="#" class="nav-brand">
+  <a href="{{ url('/') }}" class="nav-brand">
     <div class="nav-logo">
       <svg viewBox="0 0 24 24" fill="none" stroke="#0B3D6E" stroke-width="2" stroke-linecap="round">
         <path d="M12 2L12 22M2 12L22 12"/>

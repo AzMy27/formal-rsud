@@ -128,6 +128,13 @@ jQuery(document).ready(function() {
 	'use strict';
 	dz_rev_slider_4();
 });	/*ready*/
+<script>
+document.querySelectorAll('.info-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        button.closest('.info-card').classList.toggle('active');
+    });
+});
+</script>
 </script>
 </body>
 </html>

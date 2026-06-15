@@ -154,6 +154,7 @@
       border-radius: 20px;
       overflow: hidden;
     }
+    .dir-photo img{ width:100%; height:100%; object-fit:cover; }
     .dir-silhouette { width: 75%; opacity: .55; }
     .sambutan-text { max-width: 700px; }
     .section-eyebrow { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--blue); font-weight: 600; margin-bottom: 14px; }
@@ -228,11 +229,13 @@
     }
     .news-card:hover { box-shadow: 0 16px 48px rgba(11,61,110,.1); transform: translateY(-4px); }
     .news-img {
-      width: 100%; aspect-ratio: 16/9; object-fit: cover;
+      width: 100%; aspect-ratio: 16/9; object-fit: cover; overflow: hidden;
       background: linear-gradient(135deg, var(--sky), #b8d8f2);
       display: flex; align-items: center; justify-content: center;
       font-size: 2.5rem;
+      border-radius: 16px 16px 0 0;
     }
+    .news-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .news-body { padding: 22px; }
     .news-tag { display: inline-block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--blue); background: var(--sky); padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; }
     .news-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); line-height: 1.4; margin-bottom: 8px; }
@@ -370,6 +373,149 @@
     .news-link:hover{
         color:#0B3D6E;
     }
+
+    /* ── HALAMAN INFORMASI ─────────────────────────────── */
+    .info-section{ padding:80px 5%; background:#f8fafc; }
+    .section-header{ text-align:center; margin-bottom:50px; }
+    .section-header h2{ font-size:2.2rem; color:#0b3d6e; font-weight:700; margin-bottom:15px; }
+    .section-header p{ max-width:700px; margin:auto; color:#64748b; line-height:1.8; }
+    .info-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:25px; }
+    .info-card{
+      background:#fff;
+      padding:30px;
+      border-radius:16px;
+      box-shadow:0 8px 24px rgba(0,0,0,.06);
+      transition:.3s;
+    }
+    .info-card:hover{ transform:translateY(-6px); box-shadow:0 15px 30px rgba(0,0,0,.1); }
+    .info-icon{
+      width:60px;
+      height:60px;
+      border-radius:15px;
+      background:#e8f1fb;
+      color:#0b3d6e;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      margin-bottom:20px;
+    }
+    .info-card h4{ color:#0b3d6e; margin-bottom:12px; font-size:1.1rem; }
+    .info-card p{ color:#64748b; line-height:1.7; margin-bottom:15px; }
+    .info-card a{ color:#0b3d6e; text-decoration:none; font-weight:600; }
+    .info-card a:hover{ color:#d4a437; }
+    .info-toggle{
+      width:100%;
+      border:none;
+      background:none;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:600;
+      color:#0b3d6e;
+      padding:10px 0;
+    }
+    .info-content{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+    .info-card.active .info-content{ max-height:200px; }
+    .info-card.active .fa-chevron-down{ transform:rotate(180deg); }
+    .fa-chevron-down{ transition:.3s; }
+
+    /* ── PROFIL ───────────────────────────── */
+    #profil{ padding:100px 8%; background:#fff; }
+    .profil-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:50px;
+      align-items:center;
+      margin-top:50px;
+    }
+    .profil-content h3{ color:var(--navy); margin-bottom:20px; font-size:1.8rem; }
+    .profil-content p{
+      color:var(--muted);
+      line-height:1.9;
+      margin-bottom:18px;
+      text-align:justify;
+    }
+    .profil-image img{ width:100%; border-radius:20px; display:block; box-shadow:0 20px 50px rgba(0,0,0,.08); }
+    .profil-stats{ display:grid; gap:15px; margin-top:30px;
+      grid-template-columns:repeat(3,1fr);
+    }
+    .stat-box{ background:#f8fafc; padding:20px; border-radius:14px; text-align:center; }
+    .stat-box h4{ color:var(--blue); font-size:1.4rem; margin-bottom:5px; }
+    .stat-box span{ color:var(--muted); font-size:.85rem; }
+    .visi-misi-grid{ display:grid; gap:30px; margin-top:70px;
+      grid-template-columns:1fr 1fr;
+    }
+    .visi-card,
+    .misi-card{
+    background:#f8fafc;
+    padding:35px;
+    border-radius:20px;
+    border:1px solid #e5edf5;
+    }
+    .visi-card h3,
+    .misi-card h3{ color:var(--navy); margin-bottom:18px; }
+    .visi-card p{ line-height:1.8; color:var(--muted); }
+    .misi-card ul{ padding-left:20px; }
+    .misi-card li{ margin-bottom:12px; color:var(--muted); line-height:1.7; }
+
+    /* ── LAYANAN ───────────────────────── */
+    #layanan{ padding:100px 8%; background:#fff; }
+    .layanan-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:60px; }
+    .layanan-card{
+        background:#fff;
+        border:1px solid #e5edf5;
+        border-radius:18px;
+        padding:30px;
+        text-align:center;
+        transition:.3s;
+    }
+    .layanan-card:hover{ transform:translateY(-5px); box-shadow:0 15px 40px rgba(11,61,110,.08); }
+    .layanan-icon{
+        width:70px;
+        height:70px;
+        margin:0 auto 20px;
+        border-radius:18px;
+        background:#e8f1fb;
+        color:var(--blue);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:28px;
+    }
+    .layanan-card h3{ color:var(--navy); margin-bottom:10px; }
+    .layanan-card p{ color:var(--muted); line-height:1.8; }
+
+    /* Alur Pelayanan */
+    .alur-pelayanan{ margin-top:90px; }
+    .alur-pelayanan h3{
+      text-align:center;
+      margin-bottom:40px;
+      color:var(--navy);
+      font-size:2rem;
+    }
+    .alur-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+    .alur-step{
+      text-align:center;
+      padding:30px 20px;
+      background:#f8fafc;
+      border-radius:16px;
+    }
+    .alur-step span{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+      background:var(--blue);
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:auto;
+      font-weight:bold;
+      margin-bottom:15px;
+    }
+    .alur-step h4{ color:var(--navy); }
  
     /* ── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 1100px) {
