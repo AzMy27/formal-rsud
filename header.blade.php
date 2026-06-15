@@ -388,7 +388,7 @@
 
     /* ── HALAMAN INFORMASI ─────────────────────────────── */
     .info-section{ padding:80px 5%; background:#f8fafc; }
-    .section-header{ text-align:center; margin-bottom:50px; }
+    .section-header{ text-align:center; margin-bottom:50px; margin-top: 36px;}
     .section-header h2{ font-size:2.2rem; color:#0b3d6e; font-weight:700; margin-bottom:15px; }
     .section-header p{ max-width:700px; margin:auto; color:#64748b; line-height:1.8; }
     .info-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:25px; }

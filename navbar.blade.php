@@ -17,7 +17,7 @@
       <li><a href="{{ url('/') }}">Beranda</a></li>
       <li><a href="{{ url('/profil') }}">Profil</a></li>
       <li><a href="{{ url('/layanan') }}">Layanan</a></li>
-      <li><a href="{{ url('/dokter') }}">Dokter</a></li>
+      {{-- <li><a href="{{ url('/dokter') }}">Dokter</a></li> --}}
       <li><a href="{{ url('/berita') }}">Berita</a></li>
       <li><a href="{{ url('/informasi') }}">Informasi</a></li>
       <!-- <li><a href="#" class="nav-cta">Buat Janji</a></li> -->
