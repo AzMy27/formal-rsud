@@ -6,9 +6,10 @@
     <div class="footer-brand">
       <div class="footer-logo">
         <div class="footer-logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
+          <img src="{{ get_banner('logo')->image }}" alt="RSUD Pratama Pulau Rupat">
+          {{-- <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round">
             <path d="M12 2L12 22M2 12L22 12"/>
-          </svg>
+          </svg> --}}
         </div>
         <div class="footer-logo-text">
           <span>RSUD Pratama Pulau Rupat</span>
@@ -28,13 +29,13 @@
     <div class="footer-col">
       <h4>Navigasi</h4>
       <ul class="footer-links">
-        <li><a href="#slider">Beranda</a></li>
-        <li><a href="#sambutan">Tentang Kami</a></li>
-        <li><a href="#layanan">Layanan Kesehatan</a></li>
-        <li><a href="#berita">Berita & Info</a></li>
-        <li><a href="#">Dokter Spesialis</a></li>
-        <li><a href="#">Jadwal Poli</a></li>
-        <li><a href="#">Pendaftaran Online</a></li>
+        <li><a href="{{ url('/') }}">Beranda</a></li>
+        <li><a href="{{ url('/profil') }}">Profil</a></li>
+        <li><a href="{{ url('/layanan') }}">Layanan Kesehatan</a></li>
+        <li><a href="{{ url('/dokter') }}">Dokter Spesialis</a></li>
+        <li><a href="{{ url('/berita') }}">Berita & Info</a></li>
+        <li><a href="{{ url('/informasi') }}">Jadwal Poli</a></li>
+        {{-- <li><a href="#">Pendaftaran Online</a></li> --}}
       </ul>
     </div>
  
@@ -128,13 +129,14 @@ jQuery(document).ready(function() {
 	'use strict';
 	dz_rev_slider_4();
 });	/*ready*/
+</script>
 <script>
 document.querySelectorAll('.info-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-        button.closest('.info-card').classList.toggle('active');
-    });
+  button.addEventListener('click', function() {
+    const card = this.closest('.info-card');
+    card.classList.toggle('active');
+  });
 });
-</script>
 </script>
 </body>
 </html>

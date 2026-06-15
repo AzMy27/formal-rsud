@@ -46,8 +46,7 @@
       width: 44px; height: 44px; border-radius: 50%;
       background: var(--white); display: flex; align-items: center; justify-content: center;
     }
-    .nav-logo img { width: 26px; height: 26px; }
-    .nav-logo img { width: 100%; height: 100%; object-fit:contain; }
+    .nav-logo img { width: 80%; height: 80%; object-fit: contain; display: block }
     .nav-name { display: flex; flex-direction: column; line-height: 1.1; }
     .nav-name span:first-child { font-family: 'Inter', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); }
     .nav-name span:last-child { font-size: .68rem; color: rgba(255,255,255,.7); letter-spacing: .05em; text-transform: uppercase; }
@@ -67,7 +66,6 @@
     .nav-cta:hover { background: #e8b94e !important; transform: translateY(-1px); }
  
     /* ── HERO SLIDER ───────────────────────── */
-
     #slider{
       position:relative;
       width:100%;
@@ -76,47 +74,37 @@
       max-height:900px;
       overflow:hidden;
     }
-
     .slider-wrapper{
       position:relative;
       width:100%;
       height:100%;
     }
-
     .slider-item{
       position:absolute;
       inset:0;
-
       opacity:0;
       visibility:hidden;
-
       transition:all .8s ease;
     }
-
     .slider-item.active{
       opacity:1;
       visibility:visible;
       z-index:2;
     }
-
     .slider-item img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
-
       transform:scale(1.05);
       transition:transform 8s linear;
     }
-
     .slider-item.active img{
       transform:scale(1);
     }
-
     .slider-overlay{
       position:absolute;
       inset:0;
-
       background:
       linear-gradient(
           90deg,
@@ -125,43 +113,29 @@
           rgba(11,61,110,.15) 100%
       );
     }
-
     .slider-caption{
       position:absolute;
       left:8%;
       bottom:20%;
       z-index:5;
-
       max-width:700px;
       color:#fff;
     }
-
     .slider-caption span{
       display:inline-block;
-
       background:rgba(255,255,255,.15);
-
       backdrop-filter:blur(10px);
-
       padding:8px 18px;
-
       border-radius:50px;
-
       font-size:.8rem;
       letter-spacing:.15em;
-
       margin-bottom:20px;
     }
-
     .slider-caption h1{
       font-family:'Playfair Display',serif;
-
       font-size:clamp(2.5rem,5vw,4.5rem);
-
       line-height:1.15;
-
       margin:0;
-
       text-shadow:0 10px 30px rgba(0,0,0,.25);
     }
     
@@ -300,10 +274,11 @@
     .footer-brand {}
     .footer-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
     .footer-logo-icon {
-      width: 48px; height: 48px; border-radius: 50%;
-      background: var(--blue); display: flex; align-items: center; justify-content: center;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #fff; display: flex; align-items: center; justify-content: center;
+      overflow: hidden; flex-shrink: 0;
     }
-    .footer-logo-icon svg { width: 28px; height: 28px; }
+    .footer-logo-icon img { width: 80%; height: 80%; object-fit: contain; display: block }
     .footer-logo-text span:first-child { display: block; font-family: 'Poppins', sans-serif, serif; font-size: 1.1rem; color: var(--white); }
     .footer-logo-text span:last-child { font-size: .72rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .08em; }
     .footer-desc { font-size: .85rem; line-height: 1.8; color: rgba(255,255,255,.55); max-width: 340px; }
@@ -453,8 +428,14 @@
       color:#0b3d6e;
       padding:10px 0;
     }
-    .info-content{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
-    .info-card.active .info-content{ max-height:200px; }
+    .info-content{ max-height:0; overflow:hidden; transition:max-height .4s ease; }
+    .info-content p, .info-content ul{ margin-top:15px; color:#64748b; line-height:1.8; }
+    .info-content ul{ padding-left:20px; }
+    .info-card.active .info-content{ max-height:400px; }
+    .info-toggle{ width:100%; border:none; background:none; cursor:pointer; 
+                  display:flex; justify-content:space-between; align-items:center; 
+                  font-weight:600; color:#0b3d6e; padding-top:10px; 
+                }
     .info-card.active .fa-chevron-down{ transform:rotate(180deg); }
     .fa-chevron-down{ transition:.3s; }
 
