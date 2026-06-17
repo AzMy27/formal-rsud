@@ -132,10 +132,19 @@ jQuery(document).ready(function() {
 </script>
 <script>
 document.querySelectorAll('.info-toggle').forEach(button => {
-  button.addEventListener('click', function() {
-    const card = this.closest('.info-card');
-    card.classList.toggle('active');
-  });
+    button.addEventListener('click', function() {
+
+        const card = this.closest('.info-card');
+        const text = this.querySelector('.toggle-text');
+
+        card.classList.toggle('active');
+
+        if(card.classList.contains('active')){
+            text.textContent = 'Sembunyikan';
+        } else {
+            text.textContent = 'Selengkapnya';
+        }
+    });
 });
 </script>
 </body>
