@@ -147,5 +147,25 @@ document.querySelectorAll('.info-toggle').forEach(button => {
     });
 });
 </script>
+{{-- Hamburger Mobile --}}
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('#navbar nav');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+document.querySelectorAll('.has-dropdown > a').forEach(item => {
+    item.addEventListener('click', function(e) {
+
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+
+            this.parentElement.classList.toggle('open');
+        }
+    });
+});
+</script>
 </body>
 </html>

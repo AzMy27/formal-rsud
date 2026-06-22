@@ -50,8 +50,17 @@
     .nav-name { display: flex; flex-direction: column; line-height: 1.1; }
     .nav-name span:first-child { font-family: 'Inter', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); }
     .nav-name span:last-child { font-size: .68rem; color: rgba(255,255,255,.7); letter-spacing: .05em; text-transform: uppercase; }
-    nav ul { list-style: none; display: flex; gap: 28px; }
-    nav ul li a { text-decoration: none; color: rgba(255,255,255,.88); font-size: .88rem; font-weight: 500; letter-spacing: .02em; transition: color .2s; position: relative; padding-bottom: 4px;  }
+    .menu-toggle {
+      display: none; background: none; border: none;
+      color: white; font-size: 1.8rem; cursor: pointer;
+    }
+    nav > ul { list-style: none; display: flex; gap: 28px; }
+    nav ul li { position: relative; }
+    nav ul li a {
+      text-decoration: none; color: rgba(255,255,255,.88); font-size: .88rem; font-weight: 500;
+      letter-spacing: .02em; transition: color .2s; position: relative; padding-bottom: 4px;
+      display: flex; align-items: center; gap: 5px;
+    }
     nav ul li a.active { color: var(--white); }
     nav ul li a.active::after { width: 100%; }
     nav ul li a::after { content:''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gold); transition: width .25s; }
@@ -64,6 +73,69 @@
     }
     .nav-cta::after { display: none !important; }
     .nav-cta:hover { background: #e8b94e !important; transform: translateY(-1px); }
+
+    /* ── DROPDOWN ───────────────────────────────── */
+    .caret {
+      width: 7px; height: 7px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg);
+      margin-top: -3px;
+      transition: transform .25s ease;
+    }
+    .has-dropdown:hover .caret {
+      transform: rotate(225deg);
+      margin-top: 3px;
+    }
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 0;
+      transform: translateY(8px);
+      min-width: 150px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--navy);
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+      list-style: none;
+      padding: 8px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+      z-index: 1001;
+    }
+    /* jembatan agar hover tidak putus saat kursor turun ke dropdown */
+    .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -14px;
+      left: 0;
+      right: 0;
+      height: 14px;
+    }
+    .has-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .dropdown-menu li { width: 100%; }
+    .dropdown-menu li a {
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 400;
+      white-space: nowrap;
+      display: block;
+    }
+    .dropdown-menu li a::after { display: none; }
+    .dropdown-menu li a:hover {
+      background: rgba(255,255,255,.08);
+      color: var(--gold);
+    }
  
     /* ── HERO SLIDER ───────────────────────── */
     #slider{
@@ -632,12 +704,34 @@
       .footer-main { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      nav {
+        position: absolute; top: 72px; left: 0; right: 0;
+        background: var(--navy);
+        max-height: 0; overflow: hidden;
+        transition: max-height .3s ease;
+      }
+      nav.active { max-height: 600px; }
+      nav ul { display: flex; flex-direction: column; gap: 0; padding: 10px 0; }
+      nav ul li { width: 100%; }
+      nav ul li a { padding: 14px 20px; }
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+        box-shadow: none;
+        background: rgba(255,255,255,.05);
+        margin-left: 15px;
+        display: none;
+      }
+      .has-dropdown.open .dropdown-menu { display: flex; flex-direction: column;   }
       #sambutan { grid-template-columns: 1fr; gap: 32px; padding: 72px 6%; text-align: center; }
       .sambutan-text { padding-left: 0; max-width: 100%; }
       .sambutan-body p { text-align: left; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
       .news-grid { grid-template-columns: 1fr; }
-      nav ul { display: none; }
       .footer-main { grid-template-columns: 1fr; gap: 32px; padding: 48px 6% 40px; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
     }

@@ -95,7 +95,7 @@
             {{-- Sistem Rujukan --}}
             <div class="info-card">
                 <div class="info-icon">
-                    <i class="fas fa-share-nodes"></i>
+                    <i class="fas fa-share"></i>
                 </div>
                 <h4>Sistem Rujukan</h4>
                 <p> Informasi mengenai hak serta kewajiban pasien selama menerima pelayanan kesehatan. </p>
@@ -116,7 +116,7 @@
             {{-- Hak & Kewajiban Pasian --}}
             <div class="info-card">
                 <div class="info-icon">
-                    <i class="fas fa-share-nodes"></i>
+                    <i class="fas fa-scale-balanced"></i>
                 </div>
                 <h4>Hak & Kewajiban Pasien</h4>
                 <p> Informasi mengenai hak dan kewajiban pasien selama menerima pelayanan kesehatan. </p>
