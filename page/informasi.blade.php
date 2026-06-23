@@ -21,8 +21,8 @@
                 <div class="info-content">
                     <p>
                         <strong>IGD:</strong> 24 Jam setiap hari.<br>
-                        <strong>Rawat Jalan:</strong> Senin - Jumat pukul 08.00 - 14.00 WIB.<br>
-                        <strong>Administrasi:</strong> Senin - Jumat pukul 08.00 - 16.00 WIB.
+                        <strong>Rawat Jalan:</strong> Senin - Jumat pukul 08.00 - 12.00 WIB.<br>
+                        <strong>Administrasi:</strong> Senin - Jumat pukul 08.00 - 11.00 WIB.
                     </p>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                     <i class="fas fa-share"></i>
                 </div>
                 <h4>Sistem Rujukan</h4>
-                <p> Informasi mengenai hak serta kewajiban pasien selama menerima pelayanan kesehatan. </p>
+                <p> Alur dan prosedur rujukan berjenjang BPJS Kesehatan. </p>
                 <button class="info-toggle">
                     <span class="toggle-text">Selengkapnya</span>
                     <i class="fas fa-chevron-down"></i>
@@ -112,13 +112,13 @@
                     </ul>
                 </div>
             </div>
-            {{-- Hak & Kewajiban Pasian --}}
+            {{-- Hak & Kewajiban Pasien --}}
             <div class="info-card">
                 <div class="info-icon">
                     <i class="fas fa-file-contract"></i>
                 </div>
                 <h4>Hak & Kewajiban Pasien</h4>
-                <p> Informasi mengenai hak dan kewajiban pasien selama menerima pelayanan kesehatan. </p>
+                <p>Sesuai Pasal 276 & 277 UU No. 17 Tahun 2023 tentang Kesehatan.</p>
                 <button class="info-toggle">
                     <span class="toggle-text">Selengkapnya</span>
                     <i class="fas fa-chevron-down"></i>
@@ -126,17 +126,20 @@
                 <div class="info-content">
                     <p><strong>Hak Pasien:</strong></p>
                     <ul>
-                        <li>Mendapatkan pelayanan yang aman dan bermutu.</li>
-                        <li>Mendapatkan informasi mengenai kondisi kesehatan.</li>
-                        <li>Menjaga kerahasiaan data medis.</li>
-                        <li>Menyampaikan saran dan pengaduan.</li>
+                        <li>Mendapatkan informasi mengenai Kesehatan dirinya.</li>
+                        <li>Mendapatkan penjelasan yang memadai mengenai Pelayanan Kesehatan yang diterimanya.</li>
+                        <li>Mendapatkan Pelayanan Kesehatan sesuai dengan kebutuhan medis, standar profesi, dan pelayanan yang bermutu.</li>
+                        <li>Menolak atau menyetujui tindakan medis, kecuali untuk tindakan medis yang diperlukan dalam rangka pencegahan penyakit menular dan penanggulangan KLB atau Wabah.</li>
+                        <li>Mendapatkan akses terhadap informasi yang terdapat di dalam rekam medis.</li>
+                        <li>Meminta pendapat Tenaga Medis atau Tenaga Kesehatan lain.</li>
+                        <li>Mendapatkan hak lain sesuai dengan ketentuan peraturan perundangan-undangan.</li>
                     </ul>
                     <p><strong>Kewajiban Pasien:</strong></p>
                     <ul>
-                        <li>Memberikan informasi kesehatan yang benar.</li>
-                        <li>Mematuhi tata tertib rumah sakit.</li>
-                        <li>Menghormati hak pasien lain dan petugas kesehatan.</li>
-                        <li>Memenuhi kewajiban administrasi sesuai ketentuan.</li>
+                        <li>Memberikan informasi kesehatan yang benar. Memberikan informasi yang lengkap dan jujur tentang masalah kesehatannya.</li>
+                        <li>Mematuhi nasihat dan petunjuk Tenaga Medis dan Tenaga Kesehatan.</li>
+                        <li>Menghormati hak pasien lain dan petugas kesehatan.Mematuhi ketentuan yang berlaku pada Fasilitas Pelayanan Kesehatan.</li>
+                        <li>Memberikan imbalan jasa atas pelayanan yang diterima.</li>
                     </ul>
                 </div>
             </div>

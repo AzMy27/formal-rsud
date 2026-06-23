@@ -3,10 +3,10 @@
     <div class="nav-logo">
       <img src="{{ get_banner('logo')->image }}" alt="RSUD Pratama Pulau Rupat">
     </div>
-    <div class="nav-name">
+    {{-- <div class="nav-name">
       <span>RSUD Pratama Pulau Rupat</span>
       <span>Rumah Sakit Umum Daerah</span>
-    </div>
+    </div> --}}
   </a>
   <button class="menu-toggle">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">

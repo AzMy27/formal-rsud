@@ -472,6 +472,7 @@
       transition:.3s;
       display: flex;
       flex-direction: column;
+      border: 1px solid #EAF7EF;
     }
     .info-card:hover{ transform:translateY(-6px); box-shadow:0 15px 30px rgba(0,0,0,.1); }
     .info-icon{
@@ -511,7 +512,7 @@
     .info-content{ max-height:0; overflow:hidden; transition:max-height .4s ease; }
     .info-content p, .info-content ul{ margin-top:15px; color:#64748b; line-height:1.8; }
     .info-content ul{ padding-left:20px; }
-    .info-card.active .info-content{ max-height:400px; }
+    .info-card.active .info-content{ max-height: 950px; }
     .info-toggle{ width:100%; border:none; background:none; cursor:pointer; 
                   display:flex; justify-content:space-between; align-items:center; 
                   font-weight:600; color: var(--primary); padding-top:10px; gap: 8px;
@@ -700,6 +701,17 @@
       .news-grid { grid-template-columns: 1fr 1fr; }
       .news-card.main { grid-column: 1 / -1; }
       .footer-main { grid-template-columns: 1fr 1fr; }
+      .info-grid{ grid-template-columns:repeat(2, 1fr); }
+    }
+    @media(max-width:992px){
+      .profil-grid{ grid-template-columns:1fr; }
+      .profil-stats{ columns:1fr;}
+      .misi-grid{ grid-template-columns:1fr; }
+      .budaya-grid{ grid-template-columns:repeat(2,1fr); }
+      .nilai-grid{ grid-template-columns:repeat(2,1fr); }
+      .motto-card p{ font-size:1.5rem; }
+      .vm-grid{ grid-template-columns: 1fr; }
+      .motto-card{ font-size: 1.5rem}
     }
     @media (max-width: 768px) {
       .menu-toggle { display: block; }
@@ -732,6 +744,10 @@
       .news-grid { grid-template-columns: 1fr; }
       .footer-main { grid-template-columns: 1fr; gap: 32px; padding: 48px 6% 40px; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .info-section{ padding:60px 6%; }
+      .info-grid{ grid-template-columns: 1fr; gap:20px; }
+      .section-header h2{ font-size:1.8rem; }
+      .info-card{ padding:25px; }
     }
     @media(max-width:576px){
       .budaya-grid,
@@ -740,16 +756,7 @@
       .motto-card{ padding:30px; }
       .visi-card blockquote{ font-size:1rem; }
     }
-    @media(max-width:992px){
-      .profil-grid{ grid-template-columns:1fr; }
-      .profil-stats{ columns:1fr;}
-      .misi-grid{ grid-template-columns:1fr; }
-      .budaya-grid{ grid-template-columns:repeat(2,1fr); }
-      .nilai-grid{ grid-template-columns:repeat(2,1fr); }
-      .motto-card p{ font-size:1.5rem; }
-      .vm-grid{ grid-template-columns: 1fr; }
-      .motto-card{ font-size: 1.5rem}
-    }
+
   </style>
 </head>
 <body id="bg" class="layout-light {{ !empty(get_option('body_style'))  ? str(get_option('body_style'))->lower() : ''}}" style="padding:0;{{ !empty(get_option('body_background_color'))?'background-color:'.get_option('body_background_color').';' : 'background-color:#fff;' }}{{ !empty(get_option('body_background_image')) && media_exists(get_option('body_background_image')) ?'background-image:url('.get_option('body_background_image').');' : null }}"><div id="loading-area"></div>
