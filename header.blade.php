@@ -14,14 +14,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
  
     :root {
-      --navy:   #0B3D6E;
-      --blue:   #2B9FD9;
-      --sky:    #E8F4FD;
+      --primary: #0B8F43;
+      --primary-dark: #086B32;
+      --primary-light: #EAF7EF;
       --white:  #FFFFFF;
-      --gray:   #F0F5FA;
-      --text:   #1A2A3A;
-      --muted:  #5A7080;
-      --gold:   #D4A843;
+      --gray:   #F5F7F8;
+      --text:   #1F2937;
+      --muted:  #6B7280;
+      --gold:   #B88A24;
     }
  
     html { scroll-behavior: smooth; }
@@ -33,12 +33,12 @@
       padding: 15px 5%;
       display: flex; align-items: center; justify-content: space-between;
       height: 72px;
-      background: rgba(11, 61, 110, 0.9);
+      background: rgba(11, 143, 67, 0.9);
       backdrop-filter: blur(8px);
       transition: background .35s ease, box-shadow .35s ease;
     }
     #navbar.scrolled {
-      background: var(--navy);
+      background: var(--primary);
       box-shadow: 0 2px 20px rgba(0,0,0,.25);
     }
     .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -67,7 +67,7 @@
     nav ul li a:hover { color: var(--white); }
     nav ul li a:hover::after { width: 100%; }
     .nav-cta {
-      background: var(--gold); color: var(--navy) !important; padding: 8px 20px;
+      background: var(--gold); color: var(--primary) !important; padding: 8px 20px;
       border-radius: 50px; font-weight: 600 !important; font-size: .82rem !important;
       transition: background .2s, transform .2s !important;
     }
@@ -96,7 +96,7 @@
       display: flex;
       flex-direction: column;
       gap: 0;
-      background: var(--navy);
+      background: var(--primary);
       border-radius: 10px;
       box-shadow: 0 12px 30px rgba(0,0,0,.3);
       list-style: none;
@@ -180,9 +180,9 @@
       background:
       linear-gradient(
           90deg,
-          rgba(11,61,110,.75) 0%,
-          rgba(11,61,110,.35) 45%,
-          rgba(11,61,110,.15) 100%
+          rgba(11,143,67,.75) 0%,
+          rgba(11,143,67,.35) 45%,
+          rgba(11,143,67,.15) 100%
       );
     }
     .slider-caption{
@@ -227,7 +227,7 @@
         left: -15px;
         width: 100%;
         height: 100%;
-        border: 3px solid var(--blue);
+        border: 3px solid var(--primary-dark);
         border-radius: 16px 80px 16px 80px;
         z-index: -1;
     }
@@ -240,18 +240,18 @@
     .dir-photo img{ width:100%; height:100%; object-fit:cover; }
     .dir-silhouette { width: 75%; opacity: .55; }
     .sambutan-text { max-width: 700px; }
-    .section-eyebrow { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--blue); font-weight: 600; margin-bottom: 14px; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.25; margin-bottom: 24px; color: var(--navy); }
-    .section-title em { color: var(--blue); font-style: normal; }
+    .section-eyebrow { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--primary-dark); font-weight: 600; margin-bottom: 14px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); line-height: 1.25; margin-bottom: 24px; color: var(--primary); }
+    .section-title em { color: var(--primary-dark); font-style: normal; }
     .sambutan-body p {
       font-size: 1rem;
       line-height: 1.9;
       text-align: justify;
     }
-    .dir-signature { margin-top: 28px; padding-top: 24px; border-top: 1px solid #e0eaf2; }
+    .dir-signature { margin-top: 28px; padding-top: 24px; border-top: 1px solid #EAF7EF; }
     .dir-signature p { font-size: .85rem; color: var(--muted); }
-    .dir-signature strong { display: block; color: var(--navy); font-size: 1rem; margin-top: 4px; font-family: 'Playfair Display', serif; }
-    .sig-title { font-size: .78rem; color: var(--blue); font-weight: 500; }
+    .dir-signature strong { display: block; color: var(--primary); font-size: 1rem; margin-top: 4px; font-family: 'Playfair Display', serif; }
+    .sig-title { font-size: .78rem; color: var(--primary-dark); font-weight: 500; }
  
     /* ── LAYANAN UNGGULAN ────────────────────────── */
     #layanan {
@@ -261,14 +261,14 @@
     .section-header { text-align: center; margin-bottom: 60px; }
     .section-header .section-title { margin-bottom: 12px; }
     .section-header p { color: var(--muted); font-size: .95rem; max-width: 520px; margin: 0 auto; line-height: 1.7; }
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 24px;
-	}
-  .services-grid .service-card:nth-child(5) {
-      grid-column: 2;
-  }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .services-grid .service-card:nth-child(5) {
+        grid-column: 2;
+    }
 
   /* item ke-6 (Ambulans) */
   .services-grid .service-card:nth-child(6) {
@@ -282,12 +282,12 @@
     }
     .service-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, var(--navy), var(--blue));
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
       transform: scaleX(0); transform-origin: left; transition: transform .3s;
     }
     .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(11,61,110,.12); }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-card.featured { background: var(--navy); }
+    .service-card.featured { background: var(--primary); }
     .service-card.featured .service-title { color: var(--white); }
     .service-card.featured .service-desc { color: rgba(255,255,255,.65); }
     .service-card.featured::before { background: var(--gold); transform: scaleX(1); }
@@ -298,7 +298,7 @@
     }
     .service-card.featured .service-icon { background: rgba(255,255,255,.12); }
     .service-icon svg { width: 34px; height: 34px; }
-    .service-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; line-height: 1.3; }
+    .service-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; line-height: 1.3; }
     .service-desc { font-size: .8rem; color: var(--muted); line-height: 1.65; }
  
     /* ── BERITA ──────────────────────────────────── */
@@ -306,7 +306,7 @@
     .news-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 28px; }
     .news-card {
       border-radius: 16px; overflow: hidden;
-      border: 1px solid #e2eaf2;
+      border: 1px solid #EAF7EF;
       transition: box-shadow .3s, transform .3s;
       cursor: pointer;
     }
@@ -320,23 +320,23 @@
     }
     .news-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .news-body { padding: 22px; }
-    .news-tag { display: inline-block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--blue); background: var(--sky); padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; }
-    .news-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); line-height: 1.4; margin-bottom: 8px; }
+    .news-tag { display: inline-block; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--primary-dark); background: var(--sky); padding: 4px 10px; border-radius: 20px; margin-bottom: 10px; }
+    .news-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--primary); line-height: 1.4; margin-bottom: 8px; }
     .news-excerpt { font-size: .82rem; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
     .news-meta { font-size: .75rem; color: #8fa8bc; display: flex; align-items: center; gap: 6px; }
     .news-meta span { display: flex; align-items: center; gap: 4px; }
     .view-more { text-align: center; margin-top: 48px; }
     .btn-sec {
       display: inline-flex; align-items: center; gap: 8px;
-      border: 2px solid var(--navy); color: var(--navy);
+      border: 2px solid var(--primary); color: var(--primary);
       padding: 12px 28px; border-radius: 50px; font-weight: 600; font-size: .88rem;
       text-decoration: none; transition: all .2s;
     }
-    .btn-sec:hover { background: var(--navy); color: var(--white); }
+    .btn-sec:hover { background: var(--primary); color: var(--white); }
  
     /* ── FOOTER ──────────────────────────────────── */
     footer {
-      background: #071f37;
+      background: var(--primary-dark);
       color: var(--white);
     }
     .footer-main {
@@ -362,12 +362,12 @@
       color: rgba(255,255,255,.6); text-decoration: none; font-size: .8rem;
       transition: background .2s, color .2s;
     }
-    .social-btn:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+    .social-btn:hover { background: var(--primary-dark); color: var(--white); border-color: var(--primary-dark); }
     .footer-col h4 { font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 18px; }
     .footer-links { list-style: none; }
     .footer-links li { margin-bottom: 10px; }
     .footer-links a { text-decoration: none; color: rgba(255,255,255,.55); font-size: .85rem; transition: color .2s; display: flex; align-items: center; gap: 8px; }
-    .footer-links a::before { content: '›'; color: var(--blue); font-size: 1rem; }
+    .footer-links a::before { content: '›'; color: var(--primary-dark); font-size: 1rem; }
     .footer-links a:hover { color: var(--white); }
     .footer-map iframe {
       width: 100%; height: 220px; border-radius: 10px; border: none;
@@ -375,7 +375,7 @@
     }
     .footer-address { margin-top: 14px; }
     .addr-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; font-size: .82rem; color: rgba(255,255,255,.55); }
-    .addr-item svg { flex-shrink: 0; margin-top: 1px; color: var(--blue); }
+    .addr-item svg { flex-shrink: 0; margin-top: 1px; color: var(--primary-dark); }
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,.08);
       padding: 20px 8%;
@@ -403,7 +403,7 @@
         background:#fff;
         border-radius:16px;
         overflow:hidden;
-        border:1px solid #e5e7eb;
+        border:1px solid #EAF7EF;
         transition:.3s;
         height:100%;
     }
@@ -432,11 +432,11 @@
         margin-bottom:12px;
     }
     .news-title a{
-        color:#0B3D6E;
+        color: var(--primary);
         text-decoration:none;
     }
     .news-title a:hover{
-        color:#2B9FD9;
+        color: var(--primary-dark);
     }
     .news-excerpt{
         color:#64748b;
@@ -450,18 +450,18 @@
         overflow:hidden;
     }
     .news-link{
-        color:#2B9FD9;
+        color: var(--primary-dark);
         text-decoration:none;
         font-weight:600;
     }
     .news-link:hover{
-        color:#0B3D6E;
+        color: var(--primary);
     }
 
     /* ── HALAMAN INFORMASI ─────────────────────────────── */
     .info-section{ padding:80px 5%; background:#f8fafc; }
     .section-header{ text-align:center; margin-bottom:50px; margin-top: 36px;}
-    .section-header h2{ font-size:2.2rem; color:#0b3d6e; font-weight:700; margin-bottom:15px; }
+    .section-header h2{ font-size:2.2rem; color: var(--primary); font-weight:700; margin-bottom:15px; }
     .section-header p{ max-width:700px; margin:auto; color:#64748b; line-height:1.8; }
     .info-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:25px; }
     .info-card{
@@ -478,17 +478,17 @@
       width:60px;
       height:60px;
       border-radius:15px;
-      background:#e8f1fb;
-      color:#0b3d6e;
+      background: var(--primary-light);
+      color: var(--primary);
       display:flex;
       align-items:center;
       justify-content:center;
       font-size:24px;
       margin-bottom:20px;
     }
-    .info-card h4{ color:#0b3d6e; margin-bottom:12px; font-size:1.1rem; }
+    .info-card h4{ color: var(--primary); margin-bottom:12px; font-size:1.1rem; }
     .info-card p{ color:#64748b; line-height:1.7; margin-bottom:15px; }
-    .info-card a{ color:#0b3d6e; text-decoration:none; font-weight:600; }
+    .info-card a{ color: var(--primary); text-decoration:none; font-weight:600; }
     .info-card a:hover{ color:#d4a437; }
     .info-toggle{
       width:100%;
@@ -499,7 +499,7 @@
       justify-content:space-between;
       align-items:center;
       font-weight:600;
-      color:#0b3d6e;
+      color: var(--primary);
       padding:10px 0;
     }
     .info-toggle i{
@@ -514,7 +514,7 @@
     .info-card.active .info-content{ max-height:400px; }
     .info-toggle{ width:100%; border:none; background:none; cursor:pointer; 
                   display:flex; justify-content:space-between; align-items:center; 
-                  font-weight:600; color:#0b3d6e; padding-top:10px; gap: 8px;
+                  font-weight:600; color: var(--primary); padding-top:10px; gap: 8px;
                   margin-top: auto;
                 }
     .info-card.active .fa-chevron-down{ transform:rotate(180deg); }
@@ -530,7 +530,7 @@
       align-items:center;
       margin-top:50px;
     }
-    .profil-content h3{ color:var(--navy); margin-bottom:20px; font-size:1.8rem; }
+    .profil-content h3{ color:var(--primary); margin-bottom:20px; font-size:1.8rem; }
     .profil-content p{
       color:var(--muted);
       line-height:1.9;
@@ -555,19 +555,19 @@
       padding:20px;
       border-radius:14px;
       text-align:center;
-      border:1px solid #e5edf5;
+      border:1px solid #EAF7EF;
     }
-    .stat-box h4{ color:var(--blue); font-size:1.4rem; margin-bottom:5px; }
+    .stat-box h4{ color:var(--primary-dark); font-size:1.4rem; margin-bottom:5px; }
     .stat-box span{ color:var(--muted); font-size:.85rem; }
     /* Section Title */
     .section-header-small{ text-align:center; margin:80px 0 40px; }
-    .section-header-small h3{ color:var(--navy); font-size:2rem; margin-bottom:10px; }
+    .section-header-small h3{ color:var(--primary); font-size:2rem; margin-bottom:10px; }
     .section-header-small p{ color:var(--muted); }
     /* ── MOTTO VISI MISI ───────────────────── */
     .vm-section{ margin-top:80px; }
     /* Motto */
     .motto-card{
-      background:linear-gradient(135deg,var(--navy),var(--blue));
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
       color:#fff;
       padding:45px;
       border-radius:24px;
@@ -588,15 +588,15 @@
       box-shadow:0 10px 25px rgba(0,0,0,.04);
     }
     /* Visi */
-    .visi-card h3{ color:var(--navy); margin-bottom:20px; font-size:1.7rem; }
-    .visi-card h3 i{ color:var(--blue); margin-right:10px; }
+    .visi-card h3{ color:var(--primary); margin-bottom:20px; font-size:1.7rem; }
+    .visi-card h3 i{ color:var(--primary-dark); margin-right:10px; }
     .visi-card blockquote{
       margin:0; font-size:1.05rem; line-height:2;
-      color:var(--muted); font-style:italic; border-left:4px solid var(--blue);
+      color:var(--muted); font-style:italic; border-left:4px solid var(--primary-dark);
       padding-left:20px;
     }
     /* Misi */
-    .misi-card h3{ color:var(--navy); margin-bottom:25px; font-size:1.7rem; }
+    .misi-card h3{ color:var(--primary); margin-bottom:25px; font-size:1.7rem; }
     .misi-list{ display:flex; flex-direction:column; gap:15px; }
     .misi-item{
       display:flex; align-items:flex-start; gap:12px;
@@ -620,7 +620,7 @@
       transition:.3s;
     }
     .budaya-card:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,.06); }
-    .budaya-card h4{ color:var(--blue); margin-bottom:10px; }
+    .budaya-card h4{ color:var(--primary-dark); margin-bottom:10px; }
     .budaya-card p{ color:var(--muted); line-height:1.7; font-size:.9rem; }
     /* NILAI PELAYANAN */
     .nilai-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
@@ -633,8 +633,8 @@
         transition:.3s;
     }
     .nilai-card:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,.06); }
-    .nilai-card i{ font-size:2rem; color:var(--blue); margin-bottom:15px; }
-    .nilai-card h4{ color:var(--navy); margin-bottom:10px; }
+    .nilai-card i{ font-size:2rem; color:var(--primary-dark); margin-bottom:15px; }
+    .nilai-card h4{ color:var(--primary); margin-bottom:10px; }
     .nilai-card p{ color:var(--muted); font-size:.9rem; line-height:1.7; }
 
     /* ── LAYANAN ───────────────────────── */
@@ -654,14 +654,14 @@
         height:70px;
         margin:0 auto 20px;
         border-radius:18px;
-        background:#e8f1fb;
-        color:var(--blue);
+        background: var(--primary-light);
+        color:var(--primary-dark);
         display:flex;
         align-items:center;
         justify-content:center;
         font-size:28px;
     }
-    .layanan-card h3{ color:var(--navy); margin-bottom:10px; }
+    .layanan-card h3{ color:var(--primary); margin-bottom:10px; }
     .layanan-card p{ color:var(--muted); line-height:1.8; }
 
     /* Alur Pelayanan */
@@ -669,7 +669,7 @@
     .alur-pelayanan h3{
       text-align:center;
       margin-bottom:40px;
-      color:var(--navy);
+      color:var(--primary);
       font-size:2rem;
     }
     .alur-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
@@ -683,7 +683,7 @@
       width:55px;
       height:55px;
       border-radius:50%;
-      background:var(--blue);
+      background:var(--primary-dark);
       color:#fff;
       display:flex;
       align-items:center;
@@ -692,7 +692,7 @@
       font-weight:bold;
       margin-bottom:15px;
     }
-    .alur-step h4{ color:var(--navy); }
+    .alur-step h4{ color:var(--primary); }
  
     /* ── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 1100px) {
@@ -705,7 +705,7 @@
       .menu-toggle { display: block; }
       nav {
         position: absolute; top: 72px; left: 0; right: 0;
-        background: var(--navy);
+        background: var(--primary);
         max-height: 0; overflow: hidden;
         transition: max-height .3s ease;
       }
@@ -747,6 +747,8 @@
       .budaya-grid{ grid-template-columns:repeat(2,1fr); }
       .nilai-grid{ grid-template-columns:repeat(2,1fr); }
       .motto-card p{ font-size:1.5rem; }
+      .vm-grid{ grid-template-columns: 1fr; }
+      .motto-card{ font-size: 1.5rem}
     }
   </style>
 </head>

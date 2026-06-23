@@ -70,6 +70,8 @@
                     Visi
                 </h3>
                 <blockquote>
+                    <br>
+                    <br>
                     Menjadi pusat pelayanan kesehatan dasar dan rujukan pertama
                     Ibu dan Anak yang prima dan terjangkau untuk mewujudkan
                     masyarakat Pulau Rupat yang sehat dan mandiri.
