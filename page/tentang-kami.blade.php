@@ -52,75 +52,60 @@
 
     </div>
 
-    <!-- VISI -->
-    <div class="visi-section">
-        <div class="visi-card">
-            <h3><i class="fas fa-bullseye"></i> Visi</h3>
-
-            <blockquote>
-                Menjadi pusat pelayanan kesehatan dasar dan rujukan pertama Ibu dan
-                Anak yang prima dan terjangkau untuk mewujudkan masyarakat Pulau
-                Rupat yang sehat dan mandiri.
-            </blockquote>
-        </div>
-    </div>
-
-    <!-- MISI -->
-    <div class="misi-section">
-
-        <div class="section-header-small">
-            <h3>Misi</h3>
-            <p>Komitmen RSUD Pratama Pulau Rupat dalam memberikan pelayanan terbaik.</p>
-        </div>
-
-        <div class="misi-grid">
-
-            <div class="misi-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Menjadikan pusat rujukan pelayanan kesehatan ibu dan anak.</span>
-            </div>
-
-            <div class="misi-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Memberikan pelayanan kesehatan dasar yang komprehensif dan berkualitas.</span>
-            </div>
-
-            <div class="misi-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Mengutamakan keselamatan pasien dan kepuasan masyarakat.</span>
-            </div>
-
-            <div class="misi-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Meningkatkan kompetensi dan profesionalisme SDM.</span>
-            </div>
-
-            <div class="misi-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Menyelenggarakan sistem rujukan yang terkoordinasi.</span>
-            </div>
-
-            <div class="misi-item">
-                <i class="fas fa-check-circle"></i>
-                <span>Menyediakan fasilitas medis dan non-medis yang esensial.</span>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- MOTTO -->
-    <div class="motto-section">
-
+    <!-- MOTTO - VISI - MISI -->
+    <div class="vm-section">
+        <!-- MOTTO -->
         <div class="motto-card">
             <h3>Motto Pelayanan</h3>
-
             <p>
                 "Pelayanan Berkualitas, Kesehatan Prioritas"
             </p>
-
         </div>
-
+        <!-- VISI & MISI -->
+        <div class="vm-grid">
+            <!-- VISI -->
+            <div class="visi-card">
+                <h3>
+                    <i class="fas fa-bullseye"></i>
+                    Visi
+                </h3>
+                <blockquote>
+                    Menjadi pusat pelayanan kesehatan dasar dan rujukan pertama
+                    Ibu dan Anak yang prima dan terjangkau untuk mewujudkan
+                    masyarakat Pulau Rupat yang sehat dan mandiri.
+                </blockquote>
+            </div>
+            <!-- MISI -->
+            <div class="misi-card">
+                <h3>Misi</h3>
+                <div class="misi-list">
+                    <div class="misi-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Menjadikan pusat rujukan pelayanan kesehatan ibu dan anak.</span>
+                    </div>
+                    <div class="misi-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Memberikan pelayanan kesehatan dasar yang komprehensif dan berkualitas.</span>
+                    </div>
+                    <div class="misi-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Mengutamakan keselamatan pasien dan kepuasan masyarakat.</span>
+                    </div>
+                    <div class="misi-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Meningkatkan kompetensi dan profesionalisme SDM.</span>
+                    </div>
+                    <div class="misi-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Menyelenggarakan sistem rujukan yang terkoordinasi.</span>
+                    </div>
+                    <div class="misi-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Menyediakan fasilitas medis dan non-medis yang esensial.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- BUDAYA KERJA -->

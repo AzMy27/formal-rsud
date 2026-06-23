@@ -520,7 +520,7 @@
     .info-card.active .fa-chevron-down{ transform:rotate(180deg); }
     .fa-chevron-down{ transition:.3s; }
 
-    /* ── PROFIL ───────────────────────────── */
+    /* ── Tentang Kami ───────────────────────────── */
     #profil{ padding:100px 8%; background:#fff; }
     /* Header */
     .profil-grid{
@@ -563,53 +563,51 @@
     .section-header-small{ text-align:center; margin:80px 0 40px; }
     .section-header-small h3{ color:var(--navy); font-size:2rem; margin-bottom:10px; }
     .section-header-small p{ color:var(--muted); }
-    /* VISI */
-    .visi-section{ margin-top:80px; }
-    .visi-card{
+    /* ── MOTTO VISI MISI ───────────────────── */
+    .vm-section{ margin-top:80px; }
+    /* Motto */
+    .motto-card{
       background:linear-gradient(135deg,var(--navy),var(--blue));
       color:#fff;
-      padding:50px;
+      padding:45px;
       border-radius:24px;
       text-align:center;
+      margin-bottom:30px;
     }
-    .visi-card h3{ margin-bottom:20px; font-size:2rem; }
-    .visi-card blockquote{
-      margin:0;
-      font-size:1.2rem;
-      line-height:1.9;
-      font-style:italic;
-    }
-    /* MISI */
-    .misi-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
-    .misi-item{
-        background:#fff;
-        border:1px solid #e5edf5;
-        border-radius:16px;
-        padding:20px;
-        display:flex;
-        gap:15px;
-        align-items:flex-start;
-        transition:.3s;
-    }
-    .misi-item:hover{ transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,.06);}
-    .misi-item i{ color:#22c55e; font-size:1.1rem; margin-top:3px; }
-    .misi-item span{ line-height:1.8; color:var(--muted); }
-    /* MOTTO */
-    .motto-section{ margin-top:80px; }
-    .motto-card{
-        background:#f8fafc;
-        border:1px solid #e5edf5;
-        border-radius:24px;
-        padding:50px;
-        text-align:center;
-    }
-    .motto-card h3{ color:var(--navy); margin-bottom:20px; }
+    .motto-card h3{ margin-bottom:15px; font-size:1.8rem; }
     .motto-card p{
+      margin:0; font-size:2rem; font-weight:700;
       font-family:'Playfair Display', serif;
-      color:var(--blue);
-      font-size:2rem;
-      font-weight:700;
-      margin:0;
+    }
+    /* Grid Visi Misi */
+    .vm-grid{ display:grid; grid-template-columns:1fr 1.3fr; gap:25px; }
+    /* Card Umum */
+    .visi-card, .misi-card{
+      background:#fff; border:1px solid #e5edf5;
+      border-radius:24px; padding:35px;
+      box-shadow:0 10px 25px rgba(0,0,0,.04);
+    }
+    /* Visi */
+    .visi-card h3{ color:var(--navy); margin-bottom:20px; font-size:1.7rem; }
+    .visi-card h3 i{ color:var(--blue); margin-right:10px; }
+    .visi-card blockquote{
+      margin:0; font-size:1.05rem; line-height:2;
+      color:var(--muted); font-style:italic; border-left:4px solid var(--blue);
+      padding-left:20px;
+    }
+    /* Misi */
+    .misi-card h3{ color:var(--navy); margin-bottom:25px; font-size:1.7rem; }
+    .misi-list{ display:flex; flex-direction:column; gap:15px; }
+    .misi-item{
+      display:flex; align-items:flex-start; gap:12px;
+      padding:14px; border-radius:12px; background:#f8fafc;
+      border:1px solid #e5edf5; transition:.3s;
+    }
+    .misi-item:hover{ transform:translateX(4px); }
+    .misi-item i{ color:#22c55e; margin-top:4px; }
+    .misi-item span{
+      color:var(--muted);
+      line-height:1.8;
     }
     /* BUDAYA KERJA */
     .budaya-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }

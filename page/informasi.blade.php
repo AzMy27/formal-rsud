@@ -116,7 +116,7 @@
             {{-- Hak & Kewajiban Pasian --}}
             <div class="info-card">
                 <div class="info-icon">
-                    <i class="fas fa-scale-balanced"></i>
+                    <i class="fas fa-file-contract"></i>
                 </div>
                 <h4>Hak & Kewajiban Pasien</h4>
                 <p> Informasi mengenai hak dan kewajiban pasien selama menerima pelayanan kesehatan. </p>

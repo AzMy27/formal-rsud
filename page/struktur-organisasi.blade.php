@@ -1,5 +1,5 @@
 {{ web_header() }}
-{{-- Visi Misi --}}
+{{-- Struktur Organisasi --}}
 <div class="page-content">
 <!-- About Us END -->
     <div class="section-berita  py-5" style="background:#f7f7f7">
@@ -17,7 +17,7 @@
                     </div>
                 <div class="row">
                     @foreach(query()->index_sort('kepegawaian') as $row)
-                        <div class="col-lg-{{$loop->first ? '12' : '4'}} col-md-6 col-sm-6 mb-4">
+                        <div class="col-lg-{{$loop->first ? '4 offset-lg-3' : '4'}} col-md-6 col-sm-6 mb-4">
                             <div class="card shadow-sm h-100 border-0" style="border-radius:12px;">
                                 <div class="text-center p-4">
                                     <img src="{{ $row->thumbnail }}"

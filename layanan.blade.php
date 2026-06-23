@@ -52,7 +52,7 @@
         </svg>
       </div>
       <p class="service-title">Rawat Inap</p>
-      <p class="service-desc">Kamar rawat inap nyaman dari kelas III hingga VIP dengan fasilitas modern dan perawat profesional.</p>
+      <p class="service-desc">Kamar rawat inap nyaman dari kelas III dan perawat profesional.</p>
     </div>
  
     <!-- Persalinan dan Kesebatan Ibu Anak -->

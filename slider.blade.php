@@ -6,7 +6,7 @@
       <div class="slider-overlay"></div>
       <div class="slider-caption">
         <span>RSUD PRATAMA PULAU RUPAT</span>
-        <h1>Melayani Dengan Hati,<br>Untuk Masyarakat Sehat</h1>
+        <h1>Melayani Dengan Hati, Untuk Masyarakat Sehat</h1>
       </div>
     </div>
     @endforeach

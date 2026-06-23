@@ -4,6 +4,9 @@
   {{ get_element('slider') }}
   {{ get_element('sambutan') }}
 
+  {{-- Visi & Misi --}}
+  
+
   {{-- Layanan --}}
   {{ get_element('layanan') }}
  

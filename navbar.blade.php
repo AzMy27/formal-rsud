@@ -20,6 +20,7 @@
     <ul>
       <li><a href="{{ url('/') }}">Beranda</a></li>
 
+      <!--
       <li class="has-dropdown">
         <a href="{{ url('/profil') }}">Profil <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -30,19 +31,18 @@
           {{-- <li><a href="{{ url('/fasilitas') }}">Fasilitas</a></li> --}}
         </ul>
       </li>
+      -->
       <li><a href="{{ url('/layanan') }}">Layanan</a></li>
 
-<!-- 
       <li class="has-dropdown">
         <a href="{{ url('/layanan') }}">Layanan <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{{ url('/igd') }}">IGD</a></li>
+          {{-- <li><a href="{{ url('/instalasi-gawat-darurat') }}">IGD</a></li> --}}
           <li><a href="{{ url('/rawat-jalan') }}">Rawat Jalan</a></li>
           <li><a href="{{ url('/rawat-inap') }}">Rawat Inap</a></li>
           {{-- <li><a href="{{ url('/penunjang') }}">Penunjang Medis</a></li> --}}
         </ul>
       </li>
--->
 
       <li><a href="{{ url('/berita') }}">Berita</a></li>
       <!--
@@ -55,7 +55,7 @@
           <li><a href="{{ url('/pengumuman') }}">Pengumuman</a></li>
         </ul>
       </li>
-       -->
+      -->
       <li><a href="{{ url('/informasi') }}">Informasi</a></li>
 
     </ul>
