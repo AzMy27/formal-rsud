@@ -20,7 +20,6 @@
     <ul>
       <li><a href="{{ url('/') }}">Beranda</a></li>
 
-      <!--
       <li class="has-dropdown">
         <a href="{{ url('/profil') }}">Profil <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -31,9 +30,8 @@
           {{-- <li><a href="{{ url('/fasilitas') }}">Fasilitas</a></li> --}}
         </ul>
       </li>
-      -->
       <li><a href="{{ url('/layanan') }}">Layanan</a></li>
-
+<!--
       <li class="has-dropdown">
         <a href="{{ url('/layanan') }}">Layanan <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -43,6 +41,7 @@
           {{-- <li><a href="{{ url('/penunjang') }}">Penunjang Medis</a></li> --}}
         </ul>
       </li>
+    -->
 
       <li><a href="{{ url('/berita') }}">Berita</a></li>
       <!--

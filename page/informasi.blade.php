@@ -86,7 +86,6 @@
                         <li>Poliklinik Rawat Jalan</li>
                         <li>Rawat Inap</li>
                         <li>Farmasi / Apotek</li>
-                        <li>Laboratorium</li>
                         <li>Ruang Tunggu Pasien dan Keluarga</li>
                         <li>Area Parkir Kendaraan</li>
                     </ul>
